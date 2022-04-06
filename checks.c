@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 18:19:32 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/06 19:51:17 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/06 19:55:13 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,10 @@ int	is_digit(char *stack)
 	int	i;
 
 	i = -1;
+	if (stack[0] == '-')
+        i = 0;
 	while (stack[++i])
-		if (!(stack[i] >= '0' && stack[i] <= '9') && stack[0] != '-')
+		if (!(stack[i] >= '0' && stack[i] <= '9'))
 			return (0);
 	return (1);
 }
