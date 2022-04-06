@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 18:19:32 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/06 19:56:54 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/06 20:20:11 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,8 @@ int	is_digit(char *stack)
 	while (stack[++i])
 		if (!(stack[i] >= '0' && stack[i] <= '9'))
 			return (0);
+	if (i >= 10 && (ft_atoi(stack) > 2147483647
+		|| ft_atoi(stack) < -2147483648))
+		return (0);
 	return (1);
 }

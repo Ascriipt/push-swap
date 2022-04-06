@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 14:11:48 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/06 19:43:07 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/06 20:19:48 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ int	*icalloc(int *tab, int fill, int n)
 	return (tab);
 }
 
-int	ft_atoi(char *str)
+long int	ft_atoi(char *str)
 {
-	int	sign;
-	int	atoi;
+	long int	sign;
+	long int	atoi;
 
 	sign = 1;
 	atoi = 0;
@@ -78,7 +78,7 @@ int	*fill_str_to_int(char **str, int n)
 	i = -1;
 	while (str[++i])
 	{
-		tab[i] = atoi(str[i]);
+		tab[i] = (int)atoi(str[i]);
 		if (!is_digit(str[i]))
 		{
 			free(tab);
