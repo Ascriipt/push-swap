@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:48:03 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/06 18:01:04 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/06 18:21:30 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <unistd.h>
 /* remove stdio.h*/
 # include <stdio.h>
+
+/* Necessary Variables */
 
 typedef struct n_stack
 {

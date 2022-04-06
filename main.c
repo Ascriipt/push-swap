@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 20:25:44 by Matteo            #+#    #+#             */
-/*   Updated: 2022/04/06 18:08:34 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/06 18:19:10 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_free(int *a_stack, int *b_stack, char **stack)
 	pa(a_stack, b_stack, ac);
 	print_int_tab(b_stack, ac + 1);*/
 
-static void	sort_sort(int *a_stack, int b_stack, int n)
+static void	sort_sort(int *a_stack, int *b_stack, int n)
 {
 	if (is_valid(a_stack))
 	{
