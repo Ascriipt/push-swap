@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checks.c                                           :+:      :+:    :+:   */
+/*   utilities2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 18:19:32 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/06 19:51:17 by maparigi         ###   ########.fr       */
+/*   Created: 2022/04/06 19:38:19 by maparigi          #+#    #+#             */
+/*   Updated: 2022/04/06 19:39:33 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_lib.h"
 
-int	no_dup(int *a_stack, int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
-	int	j;
+	size_t	i;
 
-	i = -1;
-	while (++i < n - 1)
+	i = 0;
+	while (i < n)
 	{
-		j = i;
-		while (++j < n)
-			if (a_stack[i] == a_stack[j])
-				return (0);
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		if (s1[i] == '\0' || s2[i] == '\0')
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
 	}
-	return (1);
-}
-
-int	is_digit(char *stack)
-{
-	int	i;
-
-	i = -1;
-	while (stack[++i])
-		if (!(stack[i] >= '0' && stack[i] <= '9') && stack[0] != '-')
-			return (0);
-	return (1);
+	return (0);
 }

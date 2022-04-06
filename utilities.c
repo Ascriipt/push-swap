@@ -6,11 +6,20 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 14:11:48 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/05 19:37:37 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/06 19:43:07 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_lib.h"
+
+void	free_ctab(char **tab)
+{
+	int	i;
+
+	i = -1;
+	while (tab[++i])
+		free(tab[i]);
+}
 
 int	*icalloc(int *tab, int fill, int n)
 {
@@ -68,15 +77,13 @@ int	*fill_str_to_int(char **str, int n)
 		return (NULL);
 	i = -1;
 	while (str[++i])
+	{
 		tab[i] = atoi(str[i]);
+		if (!is_digit(str[i]))
+		{
+			free(tab);
+			return (NULL);
+		}
+	}
 	return (tab);
-}
-
-void	free_ctab(char **tab)
-{
-	int	i;
-
-	i = -1;
-	while (tab[++i])
-		free(tab[i]);
 }

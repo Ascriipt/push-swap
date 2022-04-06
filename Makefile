@@ -6,7 +6,7 @@
 #    By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/20 14:57:20 by maparigi          #+#    #+#              #
-#    Updated: 2022/04/04 20:21:54 by maparigi         ###   ########.fr        #
+#    Updated: 2022/04/06 19:40:29 by maparigi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ CC = gcc
 
 SRCS = ft_split.c utilities.c main.c push.c \
 		swap.c rotate.c reverse_rotate.c lis.c \
+		checks.c utilities2.c \
 
 OBJS = ${SRCS:.c=.o}
 
