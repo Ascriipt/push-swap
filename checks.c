@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 18:19:32 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/07 18:31:26 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/07 18:36:54 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	is_sorted(int *a_stack, int ac)
 	int	i;
 
 	i = -1;
-	while (++i < ac)
+	while (++i < ac - 1)
 		if (a_stack[i] > a_stack[i + 1])
 			return (0);
 	return (1);
