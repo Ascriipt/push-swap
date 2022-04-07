@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:48:03 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/07 18:49:55 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/07 18:59:21 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,11 @@ int		is_sorted(int *a_stack, int ac);
 int		is_valid(int *a_stack, int n);
 int		no_dup(int *a_stack, int n);
 int		is_digit(char *stack);
+
+/* Sort */
+
+void	sort_by_size(int *a_stack, int *b_stack, int ac);
+void	sort_three(int *a_stack);
 
 /* Moves Utilities */
 
