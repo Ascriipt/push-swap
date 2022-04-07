@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 23:19:29 by Matteo            #+#    #+#             */
-/*   Updated: 2022/04/06 02:20:39 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/07 19:10:40 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	pb(int *a, int *b, int n)
 	while (--i > 0)
 		b[i] = b[i - 1];
 	b[0] = swop;
+	write(1, "pb\n", 3);
 }
 
 void	pa(int *a, int *b, int n)
@@ -38,4 +39,5 @@ void	pa(int *a, int *b, int n)
 	while (--i > 0)
 		a[i] = a[i - 1];
 	a[0] = swop;
+	write(1, "pa\n", 3);
 }

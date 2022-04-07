@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 21:26:21 by Matteo            #+#    #+#             */
-/*   Updated: 2022/04/04 18:06:33 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/07 19:11:54 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ra(int *a_stack, int n)
 	while (++i < n)
 		a_stack[i - 1] = a_stack[i];
 	a_stack[i - 1] = swop;
+	write(1, "ra\n", 3);
 }
 
 void	rb(int *b_stack, int n)
@@ -34,6 +35,7 @@ void	rb(int *b_stack, int n)
 	while (++i < n)
 		b_stack[i - 1] = b_stack[i];
 	b_stack[i - 1] = swop;
+	write(1, "rb\n", 1);
 }
 
 void	rr(int *a_stack, int *b_stack, int n)
