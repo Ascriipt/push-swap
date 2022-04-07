@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 20:25:44 by Matteo            #+#    #+#             */
-/*   Updated: 2022/04/07 18:34:03 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/07 18:39:11 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int	main(int ac, char **av)
 	}
 	stacks.b_stack = icalloc(stacks.b_stack, 0, ac);
 	if (is_valid(stacks.a_stack, ac))
-		write(1, ":)\n", 3);
+		print_int_tab(stacks.a_stack, ac);
 	ft_free(stacks.a_stack, stacks.b_stack, stacks.stack);
 	return (0);
 }

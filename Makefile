@@ -6,7 +6,7 @@
 #    By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/20 14:57:20 by maparigi          #+#    #+#              #
-#    Updated: 2022/04/07 17:53:22 by maparigi         ###   ########.fr        #
+#    Updated: 2022/04/07 18:48:39 by maparigi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = clang
 
 SRCS = ft_split.c utilities.c main.c push.c \
 		swap.c rotate.c reverse_rotate.c lis.c \
-		checks.c utilities2.c \
+		checks.c move_utils.c \
 
 OBJS = ${SRCS:.c=.o}
 
