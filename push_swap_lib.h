@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:48:03 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/07 18:05:46 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/07 18:27:54 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,9 @@ void	free_ctab(char **tab);
 
 /* Checks */
 
+int		is_sorted(int *a_stack, int ac);
+int		is_valid(int *a_stack, int n);
+int		no_dup(int *a_stack, int n);
 int		is_digit(char *stack);
 
 /* Moves */
