@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:48:03 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/06 20:22:03 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/07 18:05:46 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int		bi(int *lis, int n);
 
 long	ft_atoi(char *str);
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		*fill_str_to_int(char **str, int n);
 int		*icalloc(int *tab, int fill, int n);
 int		count_int(char **str);

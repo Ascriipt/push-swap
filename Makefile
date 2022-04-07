@@ -6,13 +6,13 @@
 #    By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/20 14:57:20 by maparigi          #+#    #+#              #
-#    Updated: 2022/04/06 19:40:29 by maparigi         ###   ########.fr        #
+#    Updated: 2022/04/07 17:53:22 by maparigi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-CC = gcc
+CC = clang
 
 SRCS = ft_split.c utilities.c main.c push.c \
 		swap.c rotate.c reverse_rotate.c lis.c \

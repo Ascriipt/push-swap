@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 20:25:44 by Matteo            #+#    #+#             */
-/*   Updated: 2022/04/06 19:44:08 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/07 18:08:57 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,46 @@ void	print_int_tab(int *tab, int n)
 	while (++i < n && tab)
 		printf("%d\n", tab[i]);
 }
+
+/*void	testx(int *a, int *b, int ac)
+{
+	sa(a);
+	printf("a_stack :\n");
+	print_int_tab(a, ac);
+	printf("b_stack :\n");
+	print_int_tab(b, ac);
+	pb(a, b, ac);
+	pb(a, b, ac);
+	pb(a, b, ac);
+	printf("a_stack :\n");
+	print_int_tab(a, ac);
+	printf("b_stack :\n");
+	print_int_tab(b, ac);
+	ra(a, ac);
+	rb(b, ac);
+	printf("a_stack :\n");
+	print_int_tab(a, ac);
+	printf("b_stack :\n");
+	print_int_tab(b, ac);
+	rra(a, ac);
+	rrb(b, ac);
+	printf("a_stack :\n");
+	print_int_tab(a, ac);
+	printf("b_stack :\n");
+	print_int_tab(b, ac);
+	sa(a);
+	printf("a_stack :\n");
+	print_int_tab(a, ac);
+	printf("b_stack :\n");
+	print_int_tab(b, ac);
+	pa(a, b, ac);
+	pa(a, b, ac);
+	pa(a, b, ac);
+	printf("a_stack :\n");
+	print_int_tab(a, ac);
+	printf("b_stack :\n");
+	print_int_tab(b, ac);
+}*/
 
 void	ft_free(int *a_stack, int *b_stack, char **stack)
 {
@@ -64,7 +104,7 @@ int	main(int ac, char **av)
 		ac -= 1;
 	}
 	stacks.b_stack = icalloc(stacks.b_stack, 0, ac);
-	print_int_tab(stacks.a_stack, ac);
+	testx(stacks.a_stack, stacks.b_stack, ac);
 	ft_free(stacks.a_stack, stacks.b_stack, stacks.stack);
 	return (0);
 }
