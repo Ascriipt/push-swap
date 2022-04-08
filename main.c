@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 20:25:44 by Matteo            #+#    #+#             */
-/*   Updated: 2022/04/07 19:19:49 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/08 20:46:55 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ int	main(int ac, char **av)
 		ac -= 1;
 	}
 	stacks.b_stack = icalloc(stacks.b_stack, 0, ac);
-	if (is_valid(stacks.a_stack, ac))
+	if (ac > 2 && is_valid(stacks.a_stack, ac))
 		sort_by_size(stacks.a_stack, stacks.b_stack, ac);
 	ft_free(stacks.a_stack, stacks.b_stack, stacks.stack);
 	return (0);
