@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:48:03 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/07 18:59:21 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/08 20:33:40 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,11 @@ void	print_int_tab(int *tab, int n);
 
 /* LIS */
 
-void	lis_set(int val, int *arr, int size, int n);
-void	lis_al(int *arr, int n);
-
+int		find_first_occurrence(int *arr, int to_find, int n);
 int		bi(int *lis, int n);
+
+void	lis_set(int val, int *arr, int *tofill, int n);
+void	lis_al(int *arr, int *tofill, int n);
 
 /* Utils */
 

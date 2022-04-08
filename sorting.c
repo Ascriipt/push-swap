@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 18:52:38 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/07 19:16:01 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/08 20:35:42 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,10 @@ void	sort_by_size(int *a_stack, int *b_stack, int ac)
 	if (ac == 3 && !is_sorted(a_stack, ac))
 		sort_three(a_stack);
 	else
-		printf("ac = %d\n", ac);
+	{
+		lis_al(a_stack, b_stack, ac);
+		print_int_tab(b_stack, ac);
+		printf("\n");
+	}
 	print_int_tab(a_stack, ac);
 }

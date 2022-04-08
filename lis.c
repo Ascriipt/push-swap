@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:12:14 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/05 20:40:25 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/08 20:32:51 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,29 +28,36 @@ int	bi(int *lis, int n)
 	return (j);
 }
 
-void	lis_set(int val, int *arr, int size, int n)
+int	find_first_occurrence(int *arr, int to_find, int n)
 {
-	int	*lis;
+	int	i;
+
+	i = -1;
+	while (++i < n)
+		if (arr[i] == to_find)
+			return (i);
+	return (-1);
+}
+
+void	lis_set(int val, int *arr, int *tofill, int n)
+{
 	int	i;
 	int	j;
 
 	i = -1;
 	j = 0;
-	lis = NULL;
-	lis = icalloc(lis, 0, size);
 	while (++i < n)
 	{
 		if (arr[i] >= val)
 		{
-			lis[j] = arr[i];
-			val = lis[j];
+			tofill[j] = arr[i];
+			val = tofill[j];
 			j++;
 		}
 	}
-	free(lis);
 }
 
-void	lis_al(int *arr, int n)
+void	lis_al(int *arr, int *tofill, int n)
 {
 	int	*lis;
 	int	i;
@@ -73,8 +80,7 @@ void	lis_al(int *arr, int n)
 			}
 		}
 	}
-	i = bi(arr, n);
-	j = bi(lis, n);
+	i = find_first_occurrence(lis, bi(lis, n), n);
 	free(lis);
-	lis_set(1, arr, j, n);
+	lis_set(arr[i], arr + i, tofill, n - i);
 }
