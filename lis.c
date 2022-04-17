@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:12:14 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/10 19:48:00 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/17 15:44:50 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,17 @@
 
 	/*printf("arr[%d] = %d\n", index, arr[index]);
 	printf("arr[%d] = %d\n", i, arr[i]);*/
+
+/*int	is_lis(int x, int *lis, int n)
+{
+	int	i;
+
+	i = -1;
+	while (++i < n)
+		if (lis[i] == x)
+			return (1);
+	return (0);
+}*/
 
 int	bi(int *lis, int n)
 {

@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:48:03 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/10 19:47:26 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/17 15:25:28 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	lis_al(int *arr, int *tofill, int n);
 void	lis_set(int *lis, int *arr, int *tofill, int n);
 
 int		ffo(int *arr, int to_find, int n);
+int		is_lis(int x, int *lis, int n);
 int		bi(int *lis, int n);
 
 /* Utils */
