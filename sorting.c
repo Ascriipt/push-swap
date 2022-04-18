@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 18:52:38 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/17 15:45:35 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/18 02:30:51 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ void	sort_sup_three(int *a_stack, int *b_stack, int n)
 	lis_al(a_stack, lis, n);
 	print_int_tab(lis, lis_size(lis, n) + 1);
 	fill_w_lis(a_stack, b_stack, lis, n);
+	printf("a_stack :\n");
+	print_int_tab(a_stack, n);
+	printf("b_stack :\n");
 	print_int_tab(b_stack, n);
 	free(lis);
 }
