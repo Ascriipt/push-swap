@@ -6,11 +6,25 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:38:19 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/06 19:39:33 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/18 05:50:28 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_lib.h"
+
+int	smart_rotate_int(int nb, int n)
+{
+	int	i;
+
+	i = 0;
+	if (nb <= (n / 2))
+		while (nb-- >= 0)
+			i++;
+	else
+		while (nb++ <= n)
+			i++;
+	return (i);
+}
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

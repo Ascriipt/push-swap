@@ -6,11 +6,27 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 18:45:23 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/18 03:13:07 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/18 05:37:33 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_lib.h"
+
+/*int	to_mv(int *a_stack, int *b_stack, int n)
+{
+	int	*to_move;
+	int	i;
+	int	j;
+
+	to_move = NULL;
+	to_move = icalloc(to_move, 0, lis_size(b_stack, n));
+	i = -1;
+	j = 0;
+	while (++i < n)
+	{
+		if (i <= (n / 2))
+	}
+}*/
 
 void	ruf(int	*stack, int x, int n)
 {

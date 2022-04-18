@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:48:03 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/17 15:25:28 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/18 05:49:44 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ void	fill_w_lis(int *a_stack, int *b_stack, int *lis, int n);
 void	smart_rotate(int *a_stack, int nb, int n);
 void	ruf(int	*stack, int x, int n);
 
+int		smart_rotate_int(int nb, int n);
+int		to_mv(int *a_stack, int *b_stack, int n);
 int		lis_size(int *lis, int n);
 
 /* Moves */
