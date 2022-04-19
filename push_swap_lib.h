@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:48:03 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/18 05:49:44 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/20 01:25:21 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,12 @@ int		is_valid(int *a_stack, int n);
 int		no_dup(int *a_stack, int n);
 int		is_digit(char *stack);
 
+/* Setup */
+
+int		*smot(int *stack, int n);
+
+int		si(int *lis, int n);
+
 /* Sort */
 
 void	sort_sup_three(int *a_stack, int *b_stack, int n);
@@ -80,14 +86,14 @@ int		lis_size(int *lis, int n);
 
 void	rrr(int *a_stack, int *b_stack, int n);
 void	rr(int *a_stack, int *b_stack, int n);
+void	pa(int *a, int *b, int w, int n);
+void	pb(int *a, int *b, int w, int n);
+void	rra(int *a_stack, int w, int n);
+void	rrb(int *b_stack, int w, int n);
 void	ss(int *a_stack, int *b_stack);
-void	pa(int *a, int *b, int n);
-void	pb(int *a, int *b, int n);
-void	rra(int *a_stack, int n);
-void	rrb(int *b_stack, int n);
-void	ra(int *a_stack, int n);
-void	rb(int *b_stack, int n);
-void	sa(int *a_stack);
-void	sb(int *b_stack);
+void	ra(int *a_stack, int w, int n);
+void	rb(int *b_stack, int w, int n);
+void	sa(int *a_stack, int w);
+void	sb(int *b_stack, int w);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 18:45:23 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/18 05:37:33 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/20 01:31:14 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ void	ruf(int	*stack, int x, int n)
 void	smart_rotate(int *a_stack, int nb, int n)
 {
 	if (nb <= (n / 2))
-		ra(a_stack, n);
+		ra(a_stack, 1, n);
 	else
-		rra(a_stack, n);
+		rra(a_stack, 1, n);
 }
 
 int	lis_size(int *lis, int n)
@@ -66,7 +66,7 @@ void	fill_w_lis(int *a_stack, int *b_stack, int *lis, int n)
 		if (is_lis(a_stack[i], lis, lis_size(lis, n_cpy)) == -1)
 		{
 			ruf(a_stack, a_stack[i], n);
-			pb(a_stack, b_stack, n);
+			pb(a_stack, b_stack, 1, n);
 			j++;
 			i = -1;
 			n -= 1;
