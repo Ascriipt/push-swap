@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:48:03 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/20 01:25:21 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/20 02:16:50 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int		is_digit(char *stack);
 
 /* Setup */
 
-int		*smot(int *stack, int n);
+void	smot(int *stack, int *tmp, int n);
 
 int		si(int *lis, int n);
 

@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 18:45:23 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/20 01:31:14 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/20 03:38:17 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	fill_w_lis(int *a_stack, int *b_stack, int *lis, int n)
 	n_cpy = n;
 	while (++i < n && j < n_cpy - (lis_size(lis, n_cpy) + 1))
 	{
-		if (is_lis(a_stack[i], lis, lis_size(lis, n_cpy)) == -1)
+		if (is_lis(a_stack[i], lis, lis_size(lis, n_cpy) + 1) == -1)
 		{
 			ruf(a_stack, a_stack[i], n);
 			pb(a_stack, b_stack, 1, n);

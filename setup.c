@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 01:08:44 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/20 01:28:01 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/20 03:03:40 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,18 @@ int	si(int *lis, int n)
 	return (j);
 }
 
-int	*smot(int *stack, int n)
+void	smot(int *stack, int *tmp, int n)
 {
-	print_int_tab(stack, n);
-	printf("si = %d\n", si(stack, n));
-	return (stack);
+	int	fo;
+	int i;
+	int j;
+
+	fo = ffo(stack, si(stack, n), n);
+	i = fo - 1;
+	j = -1;
+	while (++i < n)
+		tmp[++j] = stack[i];
+	i = 0;
+	while (++j < n)
+		tmp[j] = stack[i++];
 }

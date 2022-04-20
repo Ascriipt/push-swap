@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 20:25:44 by Matteo            #+#    #+#             */
-/*   Updated: 2022/04/17 15:36:31 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/20 02:25:36 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	print_int_tab(int *tab, int n)
 	i = -1;
 	while (++i < n && tab)
 		printf("%d\n", tab[i]);
+	printf("\n");
 }
 
 /*void	testx(int *a, int *b, int ac)
