@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:12:14 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/21 19:46:00 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/21 20:28:14 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	lis_set(int *lis, int *arr, int *tofill, int n)
 
 	val = bi(lis, n);
 	i = bi(lis, n) - 1;
+	n += 1;
 	while (--n > -1)
 	{
 		if (lis[n] == val)

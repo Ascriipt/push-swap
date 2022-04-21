@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 01:08:44 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/21 19:46:30 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/21 20:20:30 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ void	smot(int *stack, int *tmp, int n)
 	}
 	if (i < 0)
 		i = -1;
-	while (++i < n - 1)
+	while (++i < n)
 		tmp[++j] = stack[i];
 	i = 0;
-	while (++j < n - 1)
+	while (++j < n)
 		tmp[j] = stack[i++];
 }
