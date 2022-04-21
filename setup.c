@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 01:08:44 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/20 03:44:07 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/21 19:05:58 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,11 @@ void	smot(int *stack, int *tmp, int n)
 	fo = ffo(stack, si(stack, n), n);
 	i = fo - 1;
 	j = -1;
+	if (i < 0)
+		i = -1;
 	while (++i < n)
 		tmp[++j] = stack[i];
 	i = 0;
-	while (++j < n)
+	while (++j < n - 1)
 		tmp[j] = stack[i++];
 }
