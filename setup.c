@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 01:08:44 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/21 19:43:07 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/21 19:46:30 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	si(int *lis, int n)
 	int	j;
 
 	i = -1;
-	j = lis[0];
+	j = 2147483647;
 	while (++i < n)
 		if (lis[i] < j)
 			j = lis[i];
