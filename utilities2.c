@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:38:19 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/18 05:50:28 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/23 17:40:09 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,24 @@ int	smart_rotate_int(int nb, int n)
 		while (nb-- >= 0)
 			i++;
 	else
-		while (nb++ <= n)
+		while (nb++ <= n + 1)
 			i++;
+	return (i);
+}
+
+int	ptm(int *a_stack, int *b_stack, int n)
+{
+	int	i;
+	int	inb;
+
+	i = -1;
+	if (!a_stack)
+		return (0);
+	while (++i <= lis_size(b_stack, n))
+	{
+		inb = smart_rotate_int(i, lis_size(b_stack, n));
+		printf("inb of %d = %d\n", b_stack[i], inb);
+	}
 	return (i);
 }
 
