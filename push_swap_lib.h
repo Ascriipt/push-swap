@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:48:03 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/23 17:34:39 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/24 15:12:58 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ long	ft_atoi(char *str);
 int		*fill_str_to_int(char **str, int n);
 int		*icalloc(int *tab, int fill, int n);
 int		count_int(char **str);
+int		ft_abs(int x);
 
 char	**ft_split(char const *s, char c);
 
@@ -73,6 +74,7 @@ void	sort_by_size(int *a_stack, int *b_stack, int ac);
 void	sort_three(int *a_stack);
 
 int		ptm(int *a_stack, int *b_stack, int n);
+int		ina(int *a_stack, int x, int n);
 
 /* Moves Utilities */
 
