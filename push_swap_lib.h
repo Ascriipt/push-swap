@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:48:03 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/24 16:15:50 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/24 18:03:54 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ int		si(int *lis, int n);
 
 /* Sort */
 
+void	sort_vals(int *a_stack, int *b_stack, int vals[3], int n);
+void	sort_after_lis(int *a_stack, int *b_stack, int n);
 void	sort_sup_three(int *a_stack, int *b_stack, int n);
 void	sort_by_size(int *a_stack, int *b_stack, int ac);
 void	sort_three(int *a_stack);

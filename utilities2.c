@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:38:19 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/24 16:33:06 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/24 19:06:32 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,14 @@ int	ina(int *a_stack, int x, int n)
 {
 	int	i;
 
-	if (a_stack[0] > x)
-		return (0);
 	i = -1;
 	if (x >= bi(a_stack, n))
 		while (++i < n)
 			if (a_stack[i + 1] == si(a_stack, n))
-				return (smart_rotate_int(i, n));
+				return (smart_rotate_int(i, lis_size(a_stack, n)));
 	while (++i < n - 1)
 		if (a_stack[i] < x && a_stack[i + 1] > x)
-			return (smart_rotate_int(i, n));
+			return (smart_rotate_int(i, lis_size(a_stack, n)));
 	return (0);
 }
 
@@ -62,9 +60,9 @@ int	*ptm(int *a_stack, int *b_stack, int vals[3], int n)
 	while (++i <= lis_size(b_stack, n))
 	{
 		inb = smart_rotate_int(i, lis_size(b_stack, n));
-		if (inb > -1)
+		if (inb > 0)
 			inb -= 1;
-		else
+		else if (inb < 0)
 			inb += 1;
 		vina = ina(a_stack, b_stack[i], lis_size(a_stack, n));
 		if (j == 0 || (ft_total(vina, inb, i, lis_size(b_stack, n))
