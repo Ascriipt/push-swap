@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 18:16:04 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/24 19:55:06 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/24 21:17:08 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	rrb(int *b_stack, int w, int n)
 
 void	rrr(int *a_stack, int *b_stack, int n)
 {
-	rra(a_stack, 0, lis_size(a_stack, n));
-	rrb(b_stack, 0, lis_size(b_stack, n));
+	rra(a_stack, 0, lis_size(a_stack, n) + 1);
+	rrb(b_stack, 0, lis_size(b_stack, n) + 1);
 	write(1, "rrr\n", 4);
 }

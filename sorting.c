@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 18:52:38 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/24 20:15:21 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/24 21:02:17 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ void	sort_after_lis(int *a_stack, int *b_stack, int n)
 		ptm(a_stack, b_stack, vals, n);
 		sort_vals(a_stack, b_stack, vals, n);
 	}
-	//print_int_tab(a_stack, lis_size(a_stack, n));
+	ruf(a_stack, si(a_stack, n), n);
+	print_int_tab(a_stack, n);
 }
 
 void	sort_by_size(int *a_stack, int *b_stack, int ac)
