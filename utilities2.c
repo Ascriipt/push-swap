@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:38:19 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/24 19:06:32 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/24 20:10:23 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ina(int *a_stack, int x, int n)
 	return (0);
 }
 
-int	*ptm(int *a_stack, int *b_stack, int vals[3], int n)
+void	ptm(int *a_stack, int *b_stack, int vals[3], int n)
 {
 	int	i;
 	int	j;
@@ -65,15 +65,14 @@ int	*ptm(int *a_stack, int *b_stack, int vals[3], int n)
 		else if (inb < 0)
 			inb += 1;
 		vina = ina(a_stack, b_stack[i], lis_size(a_stack, n));
-		if (j == 0 || (ft_total(vina, inb, i, lis_size(b_stack, n))
-				< ft_total(vals[1], vals[2], i, lis_size(b_stack, n))))
+		if (j++ == 0 || (ft_total(vina, inb)
+				< ft_total(vals[1], vals[2])))
 		{
 			vals[0] = b_stack[i];
 			vals[1] = vina;
 			vals[2] = inb;
 		}
 	}
-	return (vals);
 }
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

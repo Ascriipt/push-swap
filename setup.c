@@ -6,20 +6,26 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 01:08:44 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/24 16:30:51 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/24 19:55:37 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_lib.h"
 
-int	ft_total(ina, inb, i, n)
+int	ft_total(int ina, int inb)
 {
-	int	total;
+	int	vals[2];
 
-	total = inb + ina;
-	if (i > n + 1)
-			total = inb - ina;
-	return (total);
+	vals[0] = ina;
+	vals[1] = inb;
+	if (ina * inb > 0)
+	{
+		if (ina < 0)
+			return (ft_abs(si(vals, 2)));
+		else
+			return (bi(vals, 2));
+	}
+	return (ft_abs(ina) + ft_abs(inb));
 }
 
 int	si(int *lis, int n)
