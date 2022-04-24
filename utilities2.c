@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 19:38:19 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/24 15:49:38 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/24 16:33:06 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,16 +50,15 @@ int	ina(int *a_stack, int x, int n)
 	return (0);
 }
 
-int	ptm(int *a_stack, int *b_stack, int n)
+int	*ptm(int *a_stack, int *b_stack, int vals[3], int n)
 {
 	int	i;
+	int	j;
 	int	inb;
 	int	vina;
-	int	total;
 
 	i = -1;
-	if (!a_stack)
-		return (0);
+	j = 0;
 	while (++i <= lis_size(b_stack, n))
 	{
 		inb = smart_rotate_int(i, lis_size(b_stack, n));
@@ -68,13 +67,15 @@ int	ptm(int *a_stack, int *b_stack, int n)
 		else
 			inb += 1;
 		vina = ina(a_stack, b_stack[i], lis_size(a_stack, n));
-		total = inb + vina;
-		if (i > (lis_size(b_stack, n) / 2) + 1)
-				total = inb - vina;
-		printf("in[%d] = {%d, %d}\n", b_stack[i], vina, inb);
-		printf("total[%d] = %d\n", b_stack[i], total);
+		if (j == 0 || (ft_total(vina, inb, i, lis_size(b_stack, n))
+				< ft_total(vals[1], vals[2], i, lis_size(b_stack, n))))
+		{
+			vals[0] = b_stack[i];
+			vals[1] = vina;
+			vals[2] = inb;
+		}
 	}
-	return (i);
+	return (vals);
 }
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

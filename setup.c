@@ -6,11 +6,21 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 01:08:44 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/21 20:20:30 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/24 16:30:51 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_lib.h"
+
+int	ft_total(ina, inb, i, n)
+{
+	int	total;
+
+	total = inb + ina;
+	if (i > n + 1)
+			total = inb - ina;
+	return (total);
+}
 
 int	si(int *lis, int n)
 {

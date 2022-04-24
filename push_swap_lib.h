@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 12:48:03 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/24 15:12:58 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/24 16:15:50 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ int		is_digit(char *stack);
 
 void	smot(int *stack, int *tmp, int n);
 
+int		ft_total(int ina, int inb, int i, int n);
 int		si(int *lis, int n);
 
 /* Sort */
@@ -73,7 +74,8 @@ void	sort_sup_three(int *a_stack, int *b_stack, int n);
 void	sort_by_size(int *a_stack, int *b_stack, int ac);
 void	sort_three(int *a_stack);
 
-int		ptm(int *a_stack, int *b_stack, int n);
+int		*ptm(int *a_stack, int *b_stack, int vals[3], int n);
+
 int		ina(int *a_stack, int x, int n);
 
 /* Moves Utilities */

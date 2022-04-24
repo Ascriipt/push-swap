@@ -6,7 +6,7 @@
 /*   By: maparigi <maparigi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 18:52:38 by maparigi          #+#    #+#             */
-/*   Updated: 2022/04/23 17:36:29 by maparigi         ###   ########.fr       */
+/*   Updated: 2022/04/24 16:16:57 by maparigi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,13 @@ void	sort_three(int *stack)
 
 void	sort_sup_three(int *a_stack, int *b_stack, int n)
 {
+	int	vals[3];
 	int	*lis;
 	int	*tmp;
 
 	tmp = NULL;
-	tmp = icalloc(tmp, 0, n);
 	lis = NULL;
+	tmp = icalloc(tmp, 0, n);
 	lis = icalloc(lis, 0, n);
 	smot(a_stack, tmp, n);
 	lis_al(tmp, lis, n);
@@ -49,7 +50,8 @@ void	sort_sup_three(int *a_stack, int *b_stack, int n)
 	print_int_tab(a_stack, lis_size(a_stack, n) + 1);
 	printf("b_stack :\n");
 	print_int_tab(b_stack, lis_size(b_stack, n) + 1);
-	ptm(a_stack, b_stack, n);
+	ptm(a_stack, b_stack, vals, n);
+	printf("vals[0] = %d\nvals[1] = %d\nvals[2] = %d\n", vals[0], vals[1], vals[2]);
 	free(tmp);
 	free(lis);
 }
